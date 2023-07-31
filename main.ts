@@ -19,7 +19,7 @@ function fixString (numToPad: number) {
             for (let index = 0; index < numDigits - thisLength; index++) {
                 newText = "" + newText + "0"
             }
-            newText = "" + newText + thisText.substr(0, thisLength - 1)
+            newText = "" + newText + thisText.substr(1, thisLength - 1)
         } else {
             for (let index = 0; index < numDigits - thisLength; index++) {
                 newText = "" + newText + "0"
