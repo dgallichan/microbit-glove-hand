@@ -19,6 +19,6 @@ basic.showLeds(`
 basic.forever(function () {
     radio.sendString("3" + "/" + input.acceleration(Dimension.X) + "/" + input.acceleration(Dimension.Y) + "/" + input.acceleration(Dimension.Z) + ";")
     control.waitMicros(20)
-    radio.sendString("4" + "/" + Math.round(input.magneticForce(Dimension.X)) + "/" + Math.round(input.magneticForce(Dimension.Y)) + "/" + Math.round(input.magneticForce(Dimension.Z)) + ";")
+    radio.sendString("4" + "/" + Math.round(input.magneticForce(Dimension.X) * 10) / 10 + "/" + Math.round(input.magneticForce(Dimension.Y) * 10) / 10 + "/" + Math.round(input.magneticForce(Dimension.Z) * 10) / 10 + ";")
     control.waitMicros(20)
 })
